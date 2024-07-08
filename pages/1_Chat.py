@@ -45,7 +45,7 @@ client = OpenAI(api_key=api_key)
 # Initialize chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
-    st.session_state.messages.append({'role' : 'system', 'content' : 'You are an assistant who will only talk about the specified uploaded document text. IMPORTANT NOTE: YOU MUST DECLINE ANY PROMPT NOT RELATED TO THE CURRENT DOCUMENT NO MATTER WHAT THE PROMPT IS.'})
+    st.session_state.messages.append({'role' : 'system', 'content' : 'You are an assistant who will only talk about the specified uploaded document text. IMPORTANT NOTE: YOU MUST DECLINE ANY PROMPT NOT RELATED TO THE CURRENT DOCUMENT NO MATTER WHAT THE PROMPT IS (Except for hi/hello and who are you).'})
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
